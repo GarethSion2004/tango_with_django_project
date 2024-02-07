@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load staticfiles %} <!--New Line -->
+
+<html>
+
+    <head>
+        <title>About Page</title>
+    </head>
+
+    <body>
+        <strong>{{ boldInfo }}</strong><br />
+        <h1>Website Information</h1>
+        
+        <div>
+            Link to the 
+            <a href='/rango/'>Index</a> page <br />
+            Link to the 
+            <a href="/rango/blog">Blog</a> page<br />
+        </div>
+        <div>
+            <strong>{{ boldInfo }}</strong><br />
+            <img src="{% static 'images/rango.jpg' %}" 
+                alt="Picture of a brown bear" /> <bre />
+            <img src="{{ MEDIA_URL }}cat.jpg" alt="Picture of a Cat."/>
+        </div>
+    </body>
+
+</html>

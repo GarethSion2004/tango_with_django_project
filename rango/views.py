@@ -10,9 +10,11 @@ def index(request):
     return render(request,'rango/index.html',context=context_dict)
 
 def about(request):
-    return HttpResponse("<a href='/rango/'>Index</a>")
+    info_dict = {'boldInfo': 'This tutorial has been put together by Gareth Edwards'}
+    
+    return render(request, 'rango/about.html',context=info_dict)
 
-
-
-
-
+def blog(request):
+    title_dict = {'boldTitle': 'BEARS!!'}
+    
+    return render(request, 'rango/blog.html', context=title_dict)

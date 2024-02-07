@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load staticfiles %} <!--New Line -->
+
+<html>
+
+    <head>
+        <title>Blog</title>
+    </head>
+
+    <body>
+       <h1> <strong>{{ boldTitle }}</strong></h1><br />
+        <div>
+            This is an information page about bears<br/>
+        </div>
+        <div> 
+            Link to the
+            <a href="/rango/about/">About</a> page <br />
+            Link to the 
+            <a href='/rango/'>Index</a> page <br />
+            Below is an image of a Polar Bear <br/>
+            <img src="{% static 'images/polarBear.jpg' %}" 
+                alt="Picture of a polar bear" /> 
+              <h2>  Fun facts </h2>
+              1. Polar Bears are classified as marine animals<br />
+              2. A Polar Bears skin is actually black<br />
+              3. They can swim constantly for days at a time<br />
+              4. Less than 2% of Polar Bear hunts are successful<br />
+              5. Scientists can extract Polar Bear DNA from just their footprints<br />
+        </div>
+    </body>
+
+</html>
