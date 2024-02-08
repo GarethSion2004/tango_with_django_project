@@ -22,6 +22,9 @@ def index(request):
 
 def about(request):
     info_dict = {'boldInfo': 'This tutorial has been put together by Gareth Edwards'}
+    print(request.method)
+    
+    print(request.user)
     
     return render(request, 'rango/about.html',context=info_dict)
 
@@ -58,7 +61,7 @@ def add_category(request):
         if form.is_valid():
             form.save(commit=True)
             
-            return redirect('/rango/')
+            return redirect(reverse('rango:index'))
         else:
             print(form.errors)
             
@@ -72,7 +75,7 @@ def add_page(request, category_name_slug):
         category = None
         
     if category is None:
-        return redirect('/rango/')
+        return redirect(reverse('rango:index'))
     
     form = PageForm()
     

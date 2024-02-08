@@ -1,28 +1,17 @@
-<!DOCTYPE html>
+{% extends 'rango/base.html' %}
 {% load staticfiles %} <!--New Line -->
 
-<html>
+{% block title_block %}
+About Page
+{% endblock %}
 
-    <head>
-        <title>About Page</title>
-    </head>
-
-    <body>
-        <strong>{{ boldInfo }}</strong><br />
-        <h1>Website Information</h1>
-        
-        <div>
-            Link to the 
-            <a href='/rango/'>Index</a> page <br />
-            Link to the 
-            <a href="/rango/blog">Blog</a> page<br />
-        </div>
+{% block body_block %}
+    <h1>Website Information</h1>
         <div>
             <strong>{{ boldInfo }}</strong><br />
-            <img src="{% static 'images/rango.jpg' %}" 
-                alt="Picture of a brown bear" /> <bre />
-            <img src="{{ MEDIA_URL }}cat.jpg" alt="Picture of a Cat."/>
         </div>
-    </body>
-
-</html>
+        <img src="{% static 'images/rango.jpg' %}" 
+            alt="Picture of a brown bear" /> <br />
+        <img src="{{ MEDIA_URL }}cat.jpg" alt="Picture of a Cat."/>
+        
+{% endblock %}
